@@ -2,19 +2,20 @@ import re
 
 
 def anagrams_exept_digits():
-    string = str(input())
-    string = string.split()
+    strings = str(input())
+    string = strings.split()
     anagrams_list = []
     for j in range(len(string)):
-        str = string[j]
+        str1 = string[j]
         anagram = []
-        for i in range(len(str)):
-            n = len(str) - 1 - i
-            if str[n].isalpha():
-                anagram.append(str[n])
-        for i in range(len(str)):
-            if not str[i].isalpha():
-                anagram.insert(i, str[i])
+        for i in range(len(str1)):
+            n = len(str1) - 1 - i
+            if str1[n].isalpha():
+                anagram.append(str1[n])
+        for i in range(len(str1)):
+            if not str1[i].isalpha():
+                anagram.insert(i, str1[i])
         anagram = ''.join(anagram)
         anagrams_list.append(anagram)
-    print(*anagrams_list)
+    if __name__ == '__main__':
+        print(*anagrams_list)
