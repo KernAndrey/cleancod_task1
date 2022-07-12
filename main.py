@@ -17,4 +17,5 @@ def anagrams_exept_digits():
                 anagram.insert(i, str1[i])
         anagram = ''.join(anagram)
         anagrams_list.append(anagram)
-    print(*anagrams_list)
+    if __name__ == '__main__':
+        print(*anagrams_list)
